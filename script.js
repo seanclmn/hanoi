@@ -2,28 +2,31 @@ draggables = document.querySelectorAll(".draggable")
 containers = document.querySelectorAll(".container")
 
 
+
 update_draggable()
 draggables.forEach(item => {
-
-
     item.addEventListener("dragstart",()=>{
         item.classList.add("dragging_now")
     })
     item.addEventListener("dragend",()=>{
-        item.setAttribute('draggable',false)
         item.classList.remove("dragging_now")
         update_draggable()
     })
-}
-    
-)
-
+})
 
 containers.forEach(container =>{
     container.addEventListener("dragover",(event)=>{
         event.preventDefault()
-        draggable = document.querySelector(".dragging_now")
-        container.appendChild(draggable)
+        let draggable = document.querySelector(".dragging_now")
+
+        let draggable_array = container.querySelectorAll(".draggable")
+        let target = draggable_array[draggable_array.length-1]
+
+        
+        if(draggable_array.length==0 || draggable.id[1]>target.id[1]){
+            container.appendChild(draggable)
+
+        }
     })
 
 })
