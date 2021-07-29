@@ -1,8 +1,8 @@
 draggables = document.querySelectorAll(".draggable")
 containers = document.querySelectorAll(".container")
-console.log(draggables[0])
 
 
+update_draggable()
 draggables.forEach(item => {
 
 
@@ -10,9 +10,12 @@ draggables.forEach(item => {
         item.classList.add("dragging_now")
     })
     item.addEventListener("dragend",()=>{
+        item.setAttribute('draggable',false)
         item.classList.remove("dragging_now")
+        update_draggable()
     })
-    }
+}
+    
 )
 
 
@@ -25,7 +28,28 @@ containers.forEach(container =>{
 
 })
 
+function update_draggable(){
+    //This function makes the top div of each container draggable
+    console.log(`<br>`)
+    for(i=0;i<3;i++){
+        let x= document.querySelector(`#container_${i+1}`).querySelectorAll(".draggable")
+        let top = x[x.length - 1]
+        if(x.length>0)
+            x.forEach(item =>{
+                if(item!==undefined){
+                    if(item==top){
+                        console.log(item)
+                        item.setAttribute('draggable', true)
+                    }else{
+                        item.setAttribute('draggable', false)
+                    }
+        
+                }
+            
+            }
 
-function getDragAfterElement(container,y){
-    container.querySelectorAll("draggable")
+        )
+
+
+    }
 }
