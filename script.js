@@ -1,30 +1,16 @@
-blocks = document.querySelectorAll(".block")
-console.log(blocks)
+draggables = document.querySelectorAll(".draggable")
 containers = document.querySelectorAll(".container")
+console.log(draggables[0])
 
-blocks.forEach(item => {
 
-    item.draggable = "true"
-    console.log(blocks[0])
+draggables.forEach(item => {
 
-    // let i = blocks.indexOf(item)
-
-    // still_blocks = blocks.splice(i,1)
-        
-    // still_blocks.forEach(element =>{
-    //     element.draggable = "false"
-    // })
 
     item.addEventListener("dragstart",()=>{
-
-
-
         item.classList.add("dragging_now")
-        item.style.background = "blue"
     })
     item.addEventListener("dragend",()=>{
-        item.classList.remove("draggin_now")
-        item.style.background = "antiquewhite"
+        item.classList.remove("dragging_now")
     })
     }
 )
@@ -32,9 +18,14 @@ blocks.forEach(item => {
 
 containers.forEach(container =>{
     container.addEventListener("dragover",(event)=>{
-        // event.preventDefault()
+        event.preventDefault()
         draggable = document.querySelector(".dragging_now")
         container.appendChild(draggable)
     })
 
 })
+
+
+function getDragAfterElement(container,y){
+    container.querySelectorAll("draggable")
+}
