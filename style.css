@@ -17,6 +17,11 @@ body{
 #_1{
     width: 220px;
     background-color: red;
+
+}
+#_1::after{
+    background-image: url("wood_texture.jpeg");
+    opacity: 0.1;
 }
 
 #_2{
@@ -46,6 +51,7 @@ body{
 
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: auto;
 
     height: 400px;
     width: 1200px;
@@ -58,7 +64,8 @@ body{
     height: 50px;
     width: 100%;
     background: url("wood_texture.jpeg");
-    background-size: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 
 }
 
@@ -74,11 +81,15 @@ body{
 }
 
 .move{
+    line-height: 50px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     width: 300px;
     height: 50px;
+    background: linear-gradient(white,blue);
+
+    border-radius: 20px;
 }
 
 .stick{
@@ -86,7 +97,10 @@ body{
     
     height: 300px;
     width: 30px;
-    background: url("wood_texture.jpeg");
+    background: url("vertical_wood.png");
+    background-size: 200%;
+    background-position: right 50%;
+    
     position:absolute;
     z-index: 0;
 
@@ -94,6 +108,9 @@ body{
 }
 
 #restart{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
     line-height: 50px;
     background-color: rgb(255, 136, 136);
     width: 200px;

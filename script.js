@@ -5,6 +5,8 @@ let counter = document.querySelector("#counter")
 
 update_draggable()
 
+let topscore = null
+
 restart.addEventListener("click",function(){
     draggables.forEach(item =>{
         containers[0].appendChild(item)
