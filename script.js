@@ -1,9 +1,21 @@
-draggables = document.querySelectorAll(".draggable")
-containers = document.querySelectorAll(".container")
-
+let draggables = document.querySelectorAll(".draggable")
+let containers = document.querySelectorAll(".container")
+let restart = document.querySelector("#restart")
+let counter = document.querySelector("#counter");
 
 
 update_draggable()
+
+
+
+restart.addEventListener("click",function(){
+    draggables.forEach(item =>{
+        containers[0].appendChild(item)
+    })
+    counter.innerHTML=0
+})
+
+
 draggables.forEach(item => {
     item.addEventListener("dragstart",()=>{
         item.classList.add("dragging_now")
@@ -21,15 +33,22 @@ containers.forEach(container =>{
 
         let draggable_array = container.querySelectorAll(".draggable")
         let target = draggable_array[draggable_array.length-1]
-
-        
         if(draggable_array.length==0 || draggable.id[1]>target.id[1]){
+            counter.innerHTML++
             container.appendChild(draggable)
+            check_win()
 
         }
     })
 
 })
+
+
+function check_win(){
+    if(containers[0].querySelector(".draggable") == null && containers[1].querySelector(".draggable") == null){
+        alert("you win")
+    }
+}
 
 function update_draggable(){
     //This function makes the top div of each container draggable
