@@ -1,12 +1,9 @@
 let draggables = document.querySelectorAll(".draggable")
 let containers = document.querySelectorAll(".container")
 let restart = document.querySelector("#restart")
-let counter = document.querySelector("#counter");
-
+let counter = document.querySelector("#counter")
 
 update_draggable()
-
-
 
 restart.addEventListener("click",function(){
     draggables.forEach(item =>{
@@ -14,7 +11,6 @@ restart.addEventListener("click",function(){
     })
     counter.innerHTML=0
 })
-
 
 draggables.forEach(item => {
     item.addEventListener("dragstart",()=>{
