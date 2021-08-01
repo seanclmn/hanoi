@@ -16,12 +16,12 @@ body{
     margin-right: auto;
 
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
 }
 
 #_1{
-    width: 180px;
+    width: 100%;
     background-color: red;
 
 }
@@ -31,40 +31,31 @@ body{
 }
 
 #_2{
-    width: 150px;
+    width: 80%;
     background-color: lightblue;
 }
 
 #_3{
-    width: 120px;
+    width: 65%;
     background-color: greenyellow;
 }
 
 #_4{
-    width: 80px;
+    width: 45%;
     background-color: hotpink;
 }
 
 #_5{
-    width: 50px;
+    width: 25%;
     background-color: rgb(153, 0, 255);
 }
 
 .drop_zone{
     padding-top: 10%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-
-    margin-right: auto;
-    margin-left: auto;
-
-
     height: 100%;
     width: 100%;
-
-    position: relative;
-    z-index: 0;
 }
 
 .base{
@@ -79,12 +70,13 @@ body{
 
 
 .container{
-    margin-left:auto;
-    margin-right: auto;
     height: 500px;
     width: 200px;
     display: flex;
     flex-direction: column-reverse;
+
+
+    position: relative;
 }
 
 .move{
@@ -102,19 +94,18 @@ body{
 
 .stick{
     height: 300px;
-    width: 30px;
+    width: 10%;
     background: url("vertical_wood.png");
     background-size: 200%;
     background-position: right 50%;
-    
 
-    margin-right: auto;
-    margin-left: auto;
+    position: absolute;
+    z-index: 0;
 
-    /* position:absolute;
-    z-index: 0; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    left: 45%;
 
-    /* margin-left: 15.5%; */
 }
 
 #restart{
@@ -129,15 +120,6 @@ body{
     border-radius: 15px;
 
 }
-
-
-.game_container{
-    position: relative;
-    padding-left: 8%;
-    padding-right: 8%;
-    margin-bottom: 0px;
-}
-
 
 #modal{
 	background-color: rgba(0,0,0,0.4);
