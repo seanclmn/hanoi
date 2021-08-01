@@ -4,7 +4,8 @@ body{
 }
 
 .big{
-    display: block;
+    position: relative;
+    z-index: 1;
 
 }
 .draggable{
@@ -20,7 +21,7 @@ body{
 }
 
 #_1{
-    width: 220px;
+    width: 180px;
     background-color: red;
 
 }
@@ -30,37 +31,37 @@ body{
 }
 
 #_2{
-    width: 180px;
+    width: 150px;
     background-color: lightblue;
 }
 
 #_3{
-    width: 150px;
+    width: 120px;
     background-color: greenyellow;
 }
 
 #_4{
-    width: 100px;
+    width: 80px;
     background-color: hotpink;
 }
 
 #_5{
-    width: 60px;
+    width: 50px;
     background-color: rgb(153, 0, 255);
 }
 
 .drop_zone{
-    padding-top: 500px;
+    padding-top: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
     margin-right: auto;
     margin-left: auto;
 
 
     height: 100%;
-    width: 1200px;
+    width: 100%;
 
     position: relative;
     z-index: 0;
@@ -80,9 +81,8 @@ body{
 .container{
     margin-left:auto;
     margin-right: auto;
-    height: 100%;
-    width: 400px;
-    
+    height: 500px;
+    width: 200px;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -107,10 +107,14 @@ body{
     background-size: 200%;
     background-position: right 50%;
     
-    position:absolute;
-    z-index: 0;
 
-    margin-left: 15.5%;
+    margin-right: auto;
+    margin-left: auto;
+
+    /* position:absolute;
+    z-index: 0; */
+
+    /* margin-left: 15.5%; */
 }
 
 #restart{
@@ -176,4 +180,9 @@ body{
 #myVideo{
     position: absolute;
     width: 100%;
+    z-index: 0;
+
+
+    object-fit: cover;
+    object-position: 50px 50px 50px 50px;
 }
