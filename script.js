@@ -2,14 +2,21 @@ let draggables = document.querySelectorAll(".draggable")
 let containers = document.querySelectorAll(".container")
 let restart = document.querySelector("#restart")
 let counter = document.querySelector("#counter")
-const modal = document.querySelector("#modal")
-const close_modal = document.querySelector("#close")
 
 
-update_draggable()
+
+
+let modal = document.getElementById("modal")
+let close_modal = document.getElementById("close")
 
 let topscore = null
 
+let parent_id = null
+
+
+
+
+update_draggable()
 
 close_modal.addEventListener("click",function(){
     modal.style.display="none"
@@ -25,11 +32,16 @@ restart.addEventListener("click",function(){
 
 draggables.forEach(item => {
     item.addEventListener("dragstart",()=>{
+        parent_id = item.parentElement.id
+        console.log(parent)
         item.classList.add("dragging_now")
     })
     item.addEventListener("dragend",()=>{
         item.classList.remove("dragging_now")
         update_draggable()
+        if(item.parentElement.id!==parent_id){
+            counter.innerHTML++
+        }
     })
 })
 
@@ -47,20 +59,13 @@ containers.forEach(container =>{
         }
     })
 
-    container.addEventListener("onmouseup",()=>{
-        counter.innerHTML++
-    }
-    )
-
 })
 
 
 function check_win(){
     if(containers[0].querySelector(".draggable") == null && containers[1].querySelector(".draggable") == null){
         modal.style.display="block"
-        setTimeout(function(){
-            document.querySelector("#victory").innerHTML=`<br><br>Player${player} won the game.`
-        },1000)
+
     }
 }
 
