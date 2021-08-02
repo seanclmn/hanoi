@@ -2,6 +2,8 @@ const rules = document.querySelector(".rules")
 const modal = document.querySelector("#modal")
 const close_modal = document.querySelector("#close")
 
+const links = document.querySelectorAll(".links")
+
 
 let top_score = null
 
