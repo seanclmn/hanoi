@@ -1,0 +1,82 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#myVideo{
+    position: absolute;
+    z-index:0;
+
+    width: 100%;
+
+}
+
+
+
+.title{
+    position: relative;
+    z-index: 1;
+
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 5%;
+
+    text-align: center;
+}
+#menu{
+    position: relative;
+    z-index: 1;
+
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+
+    text-align: center;
+
+}
+
+
+#close{
+    width: 80px;
+    height: 30px;
+
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+}
+#modal{
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+	display: none;
+
+}
+
+#modal-textbox{
+
+    text-align: center;
+	background: radial-gradient(rgb(255, 205, 255),rgba(255, 255, 255, 0.6));
+	height: 200px;
+	width: 550px;
+	border-radius: 10px;
+
+	margin: 150px auto;
+	padding: 2%;
+	line-height: 120%;
+}
+#victory{
+    padding-bottom: 80px;
+}
+
