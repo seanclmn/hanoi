@@ -11,7 +11,8 @@ const close_victory_modal = document.querySelector("#victory_close")
 const rules_modal = document.querySelector("#rules_modal")
 const close_rules_modal = document.querySelector("#rules_close")
 
-console.log(rules_modal.style.display)
+var start = new Audio("start.wav"); 
+start.play();
 
 rules.addEventListener("click",function(){
     rules_modal.style.display="block"
@@ -66,6 +67,9 @@ draggables.forEach(item => {
         update_draggable()
         if(item.parentElement.id!==parent_id){
             counter.innerHTML++
+
+            var wood = new Audio("wood.wav"); 
+            wood.play();
         }
     })
 })
@@ -89,6 +93,8 @@ containers.forEach(container =>{
 function check_win(){
     if(containers[0].querySelector(".draggable") == null && containers[1].querySelector(".draggable") == null){
         victory_modal.style.display="block"
+        var hit = new Audio("start.wav"); 
+        hit.play();
     }
 }
 
