@@ -2,24 +2,49 @@ let draggables = document.querySelectorAll(".draggable")
 let containers = document.querySelectorAll(".container")
 let restart = document.querySelector("#restart")
 let counter = document.querySelector("#counter")
-const modal = document.querySelector("#modal")
-const close_modal = document.querySelector("#close")
+let rules = document.querySelector("#rules")
 
 
-let top_score = null
+const victory_modal = document.querySelector("#victory_modal")
+const close_victory_modal = document.querySelector("#victory_close")
 
-//Function for closing modal
+const rules_modal = document.querySelector("#rules_modal")
+const close_rules_modal = document.querySelector("#rules_close")
+
+console.log(rules_modal.style.display)
+
+rules.addEventListener("click",function(){
+    rules_modal.style.display="block"
+})
+
+//close rules modal
+rules_close.addEventListener("click",close_the_rules_modal)
+
+//function for closing rules modal
+
+function close_the_rules_modal(){
+    rules_modal.style.display="none"
+}
+
+
+
+
+// close victory modal
+close_victory_modal.addEventListener("click",close_the_modal)
+
+//Function for closing victory modal
 function close_the_modal(){
-    modal.style.display="none"
+    victory_modal.style.display="none"
     draggables.forEach(item =>{
         containers[0].appendChild(item)
     })
     counter.innerHTML=0
 }
-// close_the_modal()
-close_modal.addEventListener("click",close_the_modal)
 
 
+
+
+//We update which blocks are draggable
 update_draggable()
 
 
@@ -63,7 +88,7 @@ containers.forEach(container =>{
 //This function checks for a win. If the game is won, a victory modal is displayed.
 function check_win(){
     if(containers[0].querySelector(".draggable") == null && containers[1].querySelector(".draggable") == null){
-        modal.style.display="block"
+        victory_modal.style.display="block"
     }
 }
 

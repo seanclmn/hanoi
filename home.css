@@ -3,6 +3,11 @@ a{
     color: black;
 }
 
+a:hover {
+    color: rgb(255, 162, 243);
+  }
+  
+
 
 #myVideo{
     position: absolute;
@@ -43,6 +48,9 @@ a{
 
 
 #close{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 80px;
     height: 30px;
 
@@ -66,9 +74,8 @@ a{
 
 #modal-textbox{
 
-    text-align: center;
-	background: radial-gradient(rgb(255, 205, 255),rgba(255, 255, 255, 0.6));
-	height: 200px;
+	background: radial-gradient(rgb(185, 185, 185),rgba(255, 255, 255, 0.6));
+	height: 300px;
 	width: 550px;
 	border-radius: 10px;
 
@@ -77,6 +84,6 @@ a{
 	line-height: 120%;
 }
 #victory{
-    padding-bottom: 80px;
+    text-align: center;
 }
 

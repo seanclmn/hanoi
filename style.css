@@ -94,15 +94,7 @@ body{
 
 }
 
-
-#close{
-    width: 80px;
-    height: 30px;
-
-    border-radius: 10px;
-    background-color: rgb(252, 252, 252);
-}
-#modal{
+.modal{
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
 	top: 0;
@@ -113,7 +105,7 @@ body{
 	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
 	overflow: auto;
 	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
-	display: none;
+
 
 }
 
@@ -121,7 +113,7 @@ body{
 
     text-align: center;
 	background: radial-gradient(rgb(255, 205, 255),rgba(255, 255, 255, 0.6));
-	height: 200px;
+	height: 300px;
 	width: 550px;
 	border-radius: 10px;
 
@@ -129,9 +121,26 @@ body{
 	padding: 2%;
 	line-height: 120%;
 }
+
+.close{
+    width: 80px;
+    height: 30px;
+
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+}
+
 #victory{
     padding-bottom: 80px;
 }
+
+#victory_modal{
+    display: none;
+}
+#rules_modal{
+    display: none;
+}
+
 
 #myVideo{
     position: absolute;
@@ -166,5 +175,5 @@ body{
 
 a{
     text-decoration: none;
-    color: black;
+    color: black;  
 }
