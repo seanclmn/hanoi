@@ -11,10 +11,13 @@ const close_victory_modal = document.querySelector("#victory_close")
 const rules_modal = document.querySelector("#rules_modal")
 const close_rules_modal = document.querySelector("#rules_close")
 
-var start = new Audio("start.wav"); 
-start.play();
+var wood_2 = new Audio("wood_2.wav"); 
+
+wood_2.play(); 
 
 rules.addEventListener("click",function(){
+    var wood_2 = new Audio("wood_2.wav"); 
+    wood_2.play();   
     rules_modal.style.display="block"
 })
 
@@ -24,6 +27,9 @@ rules_close.addEventListener("click",close_the_rules_modal)
 //function for closing rules modal
 
 function close_the_rules_modal(){
+    var wood_2 = new Audio("wood_2.wav"); 
+
+    wood_2.play(); 
     rules_modal.style.display="none"
 }
 
@@ -51,6 +57,9 @@ update_draggable()
 
 //This restarts the game. Counter is set to 0 and the game is restarted.
 restart.addEventListener("click",function(){
+    var wood_2 = new Audio("wood_2.wav"); 
+
+    wood_2.play(); 
     draggables.forEach(item =>{
         containers[0].appendChild(item)
     })
@@ -67,9 +76,6 @@ draggables.forEach(item => {
         update_draggable()
         if(item.parentElement.id!==parent_id){
             counter.innerHTML++
-
-            var wood = new Audio("wood.wav"); 
-            wood.play();
         }
     })
 })
@@ -93,8 +99,13 @@ containers.forEach(container =>{
 function check_win(){
     if(containers[0].querySelector(".draggable") == null && containers[1].querySelector(".draggable") == null){
         victory_modal.style.display="block"
-        var hit = new Audio("start.wav"); 
-        hit.play();
+        var wood_3 = new Audio("wood_3.wav"); 
+
+        wood_3.play(); 
+    }
+    else{
+        var wood = new Audio("wood.wav"); 
+        wood.play();
     }
 }
 
