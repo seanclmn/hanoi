@@ -1,73 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="home.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <div class = "big">
-        <video autoplay muted loop id="myVideo">
-            <source src="Abstract White Background HD motion graphics background loop White video Royalty Free Footages.mp4" type="video/mp4">
-        </video>
-    
-        <div class="button_container">
-            <div class="buttons">
-                <a href="home.html"><h3>HOME</h3></a>
+    <video autoplay muted loop id="myVideo">
+        <source src="Abstract White Background HD motion graphics background loop White video Royalty Free Footages.mp4" type="video/mp4">
+    </video>
 
-            </div>
-            
-            <div class="buttons" id="move">
-                <h3>Move counter: <span id="counter">0</span> moves</h3>
-                
-            </div>
 
-            <div class="buttons" id="restart">
-                <h3>RESTART</h3>
+    <div id="modal">
+        <div id="modal-textbox">
+            <div id="rules">
+                <h3>RULES</h3>
             </div>
+            <p>The objective of the puzzle is to move the entire stack to the last rod, obeying the following simple rules:<br>
+                1. Only one disk may be moved at a time.<br>
+                2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or an empty rod.<br>
+                3. No disk may be placed on top of a disk that is smaller than it.</h1><br>
+            </p>
+            <img src="screenshot.png">
+            <button id="close">Close</button>
 
         </div>
-        <div id="modal">
-            <div id="modal-textbox">
-                <h1 id="victory">You solved it!<br><br></h1>
-                <button id="close">CLOSE AND RESTART</button>
-            </div>
-        </div>
-        <div class="drop_zone">
-
-            
-            <div class = "container" id="container_1">
-                <div class="stick"></div>
-                <div class="draggable" draggable="false" id="_1" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">1</div>
-                <div class="draggable" draggable="false" id="_2" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">2</div>
-                <div class="draggable" draggable="false" id="_3" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">3</div>
-                <div class="draggable" draggable="false" id="_4" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">4</div>                    
-                <div class="draggable" draggable="false" id="_5" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">5</div>    
-
-            </div>
-            
-    
-            
-            <div class = "container" id="container_2">
-                <div class="stick"></div>
-            </div>
-                
-                
-            
-            <div class = "container" id="container_3">
-                <div class="stick"></div>
-            </div>
-        </div>
-    
-        <div class = "base"></div>
-
-
     </div>
 
 
+    <div class="title">
+        <h1>TOWERS OF HANOI</h1>
+    </div>
+    
+    
+    <div id="menu">
+        <a class="rules">RULES<br></a>
+        <a class = "links" href="index.html">3 BLOCKS<br></a>
+        <a class = "links" href="index.html">4 BLOCKS<br></a>
+        <a class = "links" href="index.html">5 BLOCKS<br></a>
+        <a class = "links" href="index.html">6 BLOCKS<br></a>
+    </div>
+</head>
+<body>
+    <script src="home.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
