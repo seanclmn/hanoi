@@ -1,6 +1,6 @@
 # Tower of Hanoi
 
-##Introduction
+## Introduction
 
 Tower of Hanoi is a mathematical puzzle invented French mathematician Édouard Lucas in 1883. 
 
