@@ -17,5 +17,5 @@ Gameplay involves dragging the the disks with the mouse. Physical constraints an
 There is a restart button which restarts the game and replaces the disks to the original configuration. There is also a rules button on every page that displays a modal with the rules of the game. There is also a move counter which counts the number of complete moves made.
 
 
-![Alt text](relative/path/to/game_play.png?raw=true "Title")
+![Alt text](game_play.png?raw=true "Title")
 
