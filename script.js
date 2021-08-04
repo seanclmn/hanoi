@@ -15,6 +15,7 @@ var wood_2 = new Audio("wood_2.wav");
 
 wood_2.play(); 
 
+
 rules.addEventListener("click",function(){
     var wood_2 = new Audio("wood_2.wav"); 
     wood_2.play();   
@@ -45,9 +46,10 @@ function close_the_modal(){
     draggables.forEach(item =>{
         containers[0].appendChild(item)
     })
+    var wood_2 = new Audio("wood_2.wav"); 
+    wood_2.play(); 
     counter.innerHTML=0
 }
-
 
 
 

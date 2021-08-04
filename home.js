@@ -9,11 +9,14 @@ let top_score = null
 
 
 var wood_2 = new Audio("wood_2.wav"); 
-    wood_2.play()
+wood_2.play()
 
-    
+
 //Function for closing modal
 function close_the_modal () {
+    var wood_2 = new Audio("wood_2.wav"); 
+    wood_2.play()
+
     modal.style.display="none"
 
 }
