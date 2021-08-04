@@ -30,3 +30,7 @@ The targeted user is someone who is looking to solve interesting mathematical pu
 
 This is the original wireframe. I initially wanted to create a timer, but instead I decided to have a move counter instead. I also initially wanted a scoreboard, but I thought that the UI would look to cluttered so I left it out of the final product.
 ![Alt text](wireframe.png?raw=true "Title")
+
+## Hurdles
+
+Implementing the functionality was initially difficult. I had to figure how to make draggable divs, and then think of ways to implement the rules of the game. I also had a lot of issues with the styling, particularly with overlaying divs in the way I wanted to. Eventually I figured everything out.
