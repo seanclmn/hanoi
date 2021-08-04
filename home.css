@@ -1,4 +1,10 @@
+h1{
+    font-family: 'Cormorant Garamond';
+    font-size: 40px;
+}
+
 a{
+    font-family: 'Cormorant Garamond';
     text-decoration: none;
     color: black;
 }
