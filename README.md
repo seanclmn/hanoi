@@ -1,5 +1,7 @@
 # Tower of Hanoi
 
+Game link: https://seanclmn.github.io/hanoi/home.html
+
 ## Introduction
 
 Tower of Hanoi is a mathematical puzzle invented French mathematician Édouard Lucas in 1883. 
